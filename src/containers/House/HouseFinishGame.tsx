@@ -1,6 +1,5 @@
 import {
   useSignAndExecuteTransactionBlock,
-  useSuiClient,
 } from "@mysten/dapp-kit";
 import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
@@ -16,7 +15,7 @@ import { HouseDataContext } from "./HouseDataContext";
 
 // This component will handle the House finishing the game when triggered
 export function HouseFinishGame() {
-  const suiClient = useSuiClient();
+
   const { mutate: execFinishGame } = useSignAndExecuteTransactionBlock();
   const [housePrivHex] = useContext(HouseKeypairContext);
   const [houseDataId] = useContext(HouseDataContext);
@@ -47,11 +46,13 @@ export function HouseFinishGame() {
         onError: (err) => {
           toast.error(err.message);
         }, onSuccess: (result: SuiTransactionBlockResponse) => {
-          console.log("success");
+          console.log("success" + result);
 
         }
       }
       );
+      console.log(result);
+
 
 
     }

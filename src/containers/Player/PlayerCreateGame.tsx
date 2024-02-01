@@ -10,7 +10,7 @@ import {
   Button,
 } from "@radix-ui/themes";
 import { toast } from "react-toastify";
-import { MIST_PER_SUI } from "@mysten/sui.js/utils";
+
 
 import { PACKAGE_ID } from "../../constants";
 import { SuiTransactionBlockResponse } from "@mysten/sui.js/client";

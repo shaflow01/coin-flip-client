@@ -10,7 +10,7 @@ import {
   Callout,
 } from "@radix-ui/themes";
 import { TransactionBlock } from "@mysten/sui.js/transactions";
-import { MIST_PER_SUI } from "@mysten/sui.js/utils";
+
 import { bcs } from "@mysten/sui.js/bcs";
 import * as curveUtils from "@noble/curves/abstract/utils";
 import { toast } from "react-toastify";
